@@ -37,7 +37,7 @@ async function startQuiz() {
       localStorage.getItem("name");
     console.log(localStorage.getItem("name"));
     // Fetch questions and display them
-    const response = await fetch("http://localhost:3000/api/v1/questions");
+    const response = await fetch("https://quiz-app-three-phi.vercel.app/api/v1/questions");
     const data = await response.json();
     displayQuestions(data);
   } catch (error) {
@@ -94,7 +94,7 @@ async function checkAllAnswers() {
   }
 
   try {
-    const response = await fetch("http://localhost:3000/api/v1/check-answer", {
+    const response = await fetch("https://quiz-app-three-phi.vercel.app/api/v1/check-answer", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
